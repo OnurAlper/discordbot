@@ -144,7 +144,7 @@ async def bcr_check_standup():
 async def before():
     await client.wait_until_ready()
 
-# Becure haftaiçi hergün kanala tarih mesajı atacak.
+# Haftaiçi hergün kanala tarih mesajı atacak.
 @tasks.loop(minutes=1)
 async def bcr_time_module():
     current_time = datetime.now().strftime("%H:%M")
